@@ -1051,12 +1051,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* === Responsive === */
 @media (max-width: 968px) {
-    /* Mobile hero: ~40% of viewport height for compact above-the-fold */
+    /* Mobile hero: ~20% of viewport height (half of previous size) */
     .hero-modern {
-        min-height: 40vh;
-        max-height: 50vh;
-        margin: 10px;
-        border-radius: 14px;
+        min-height: 20vh;
+        max-height: 25vh;
+        margin: 8px;
+        border-radius: 12px;
         /* Natural image, no overlay */
         background: url('../assets/hero-bg.jpg') center/cover no-repeat #f5f0ec;
     }
@@ -1077,9 +1077,8 @@ h1, h2, h3, h4, h5, h6 {
         right: 0;
         max-width: 100%;
         width: 100%;
-        padding: 18px 14px 12px;
+        padding: 8px 10px 6px;
         text-align: center;
-        /* Soft white fade from transparent at top to opaque at bottom */
         background: linear-gradient(to top, rgba(255,255,255,0.97) 55%, rgba(255,255,255,0.85) 80%, rgba(255,255,255,0) 100%);
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
@@ -1089,19 +1088,55 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
     }
 
-    /* Compact spacing for the bottom bar */
+    /* Very compact bottom bar */
     .hero-slides-text {
-        min-height: 80px;
-        margin-bottom: 10px;
+        min-height: 38px;
+        margin-bottom: 4px;
     }
+
+    .hero-modern-title {
+        font-size: 16px;
+        margin-bottom: 2px;
+        line-height: 1;
+    }
+
+    .hero-modern-subtitle {
+        display: none; /* hide subtitle in tight half-size hero */
+    }
+
+    .hero-tag-modern {
+        font-size: 8px;
+        padding: 2px 8px;
+        margin-bottom: 4px;
+        letter-spacing: 0;
+    }
+
+    .hero-tag-dot { width: 4px; height: 4px; }
 
     .hero-modern-actions {
-        margin-bottom: 10px;
+        margin-bottom: 4px;
+        gap: 6px;
     }
 
-    .hero-stats {
-        margin-bottom: 8px;
+    .hero-btn-primary {
+        padding: 5px 12px;
+        font-size: 10px;
+        gap: 4px;
     }
+
+    .hero-btn-primary i { font-size: 9px; }
+    .hero-btn-link { font-size: 9px; }
+
+    .hero-stats {
+        margin-bottom: 4px;
+        gap: 8px;
+    }
+
+    .hero-stat strong { font-size: 12px; }
+    .hero-stat span { font-size: 7px; }
+    .hero-stat-divider { height: 18px; }
+
+    .hero-page { width: 18px; height: 2px; }
 
     .hero-modern-showcase {
         display: none; /* Already hidden */
@@ -1195,8 +1230,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 600px) {
     .hero-modern {
-        min-height: 40vh;
-        max-height: 45vh;
+        min-height: 20vh;
+        max-height: 24vh;
     }
 
     .hero-modern-actions {
