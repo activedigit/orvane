@@ -252,33 +252,81 @@ document.addEventListener('DOMContentLoaded', function() {
         const grid = document.getElementById(gridId);
         if (!grid || typeof PRODUCTS === 'undefined') return;
 
+        const hasImg = (p) => p.image && typeof p.image === 'string' && p.image.startsWith('http');
         let filtered = PRODUCTS;
-        if (filter === 'perfumes') {
-            filtered = PRODUCTS.filter(p => p.type === 'perfume' && p.image && p.image.startsWith('http'));
-        } else if (filter === 'bakhoor') {
-            filtered = PRODUCTS.filter(p => p.type === 'bakhoor');
-        } else if (filter === 'offers' || filter === 'sale') {
-            // Show products with original price (have discount) OR best low-priced products
-            filtered = PRODUCTS.filter(p =>
-                (p.originalPrice && p.originalPrice > p.price) ||
-                (p.badges && p.badges.includes('sale')) ||
-                p.price <= 30 // cheap offers as fallback
-            ).filter(p => p.image && p.image.startsWith('http'));
-        } else if (filter === 'bestsellers') {
-            filtered = PRODUCTS.filter(p => p.bestseller || (p.image && p.image.startsWith('http')));
-        } else if (filter === 'featured') {
-            filtered = PRODUCTS.filter(p => p.featured || (p.image && p.image.startsWith('http')));
+
+        switch (filter) {
+            case 'perfumes':
+                filtered = PRODUCTS.filter(p => (p.type === 'perfume' || p.category === 'perfume') && hasImg(p));
+                break;
+            case 'bakhoor':
+                filtered = PRODUCTS.filter(p => p.type === 'bakhoor');
+                break;
+            case 'offers':
+            case 'sale':
+                filtered = PRODUCTS.filter(p =>
+                    (p.originalPrice && p.originalPrice > p.price) ||
+                    (p.badges && p.badges.includes('sale')) ||
+                    p.price <= 30
+                ).filter(hasImg);
+                break;
+            case 'skincare':
+                filtered = PRODUCTS.filter(p =>
+                    (p.category === 'face' || ['serum','cream','toner','cleanser','sunscreen','mask'].includes(p.type)) && hasImg(p)
+                );
+                break;
+            case 'korean':
+                const koreanBrands = ['Beauty of Joseon', 'Purito', 'Medicube', 'Dr. Althea', 'Arencia', 'COSRX', 'SKIN1004', 'Anua', "A'pieu", "I'm From", 'Mediheal', 'Some By Mi'];
+                filtered = PRODUCTS.filter(p => koreanBrands.includes(p.brand) && hasImg(p));
+                break;
+            case 'new':
+            case 'newArrivals':
+                // Use higher product IDs as proxy for "newer"
+                filtered = PRODUCTS.filter(hasImg)
+                    .slice()
+                    .sort((a, b) => (b.id || 0) - (a.id || 0))
+                    .slice(0, 100);
+                break;
+            case 'makeup':
+                filtered = PRODUCTS.filter(p =>
+                    (['lips','eyes','cheeks','face_makeup','tools'].includes(p.category) ||
+                     ['lipstick','lipgloss','lipbalm','mascara','eyeliner','eyeshadow','concealer','foundation','powder','blush','primer','contour','brush','brow'].includes(p.type)) && hasImg(p)
+                );
+                break;
+            case 'bestsellers':
+                filtered = PRODUCTS.filter(p => p.bestseller || hasImg(p));
+                break;
+            case 'featured':
+                filtered = PRODUCTS.filter(p => p.featured || hasImg(p));
+                break;
         }
 
-        // Stable shuffle - same products every refresh
-        filtered = filtered.slice(0, Math.max(limit, 50)).filter((_, i) => i % Math.max(1, Math.floor(filtered.length / limit / 3)) === 0);
+        // Stable selection with variety - distribute across the filtered set
+        if (filtered.length > limit) {
+            const step = Math.max(1, Math.floor(filtered.length / (limit * 1.5)));
+            const seedOffset = (gridId.charCodeAt(0) * 7) % step;
+            const picked = [];
+            for (let i = seedOffset; i < filtered.length && picked.length < limit; i += step) {
+                picked.push(filtered[i]);
+            }
+            // Fill remaining from start if needed
+            for (let i = 0; picked.length < limit && i < filtered.length; i++) {
+                if (!picked.includes(filtered[i])) picked.push(filtered[i]);
+            }
+            filtered = picked;
+        }
+
         filtered = filtered.slice(0, limit);
         grid.innerHTML = filtered.map(createProductCard).join('');
     }
 
-    renderProducts('perfumesGrid', 'featured', 5);
+    renderProducts('perfumesGrid', 'perfumes', 5);
     renderProducts('creamsGrid', 'offers', 5);
     renderProducts('bestsellersGrid', 'bestsellers', 5);
+    renderProducts('skincareGrid', 'skincare', 5);
+    renderProducts('koreanGrid', 'korean', 5);
+    renderProducts('newArrivalsGrid', 'newArrivals', 5);
+    renderProducts('makeupGrid', 'makeup', 5);
 
     // ===== Cart Management =====
     let cart = JSON.parse(localStorage.getItem('orvane_cart') || '[]');

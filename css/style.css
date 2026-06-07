@@ -1079,56 +1079,154 @@ h1, h2, h3, h4, h5, h6 {
 
 /* === Responsive === */
 @media (max-width: 968px) {
+    /* Mobile hero: ~40% of viewport height for compact above-the-fold */
     .hero-modern {
-        min-height: auto;
-        margin: 12px;
-        border-radius: 16px;
+        min-height: 40vh;
+        max-height: 50vh;
+        margin: 10px;
+        border-radius: 14px;
     }
 
     .hero-modern-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 30px 24px;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        padding: 16px;
         min-height: auto;
+        height: 100%;
+        align-items: center;
     }
 
     .hero-modern-showcase {
-        height: 380px;
+        height: 100%;
+        max-height: 40vh;
         order: 2;
+        padding: 0;
     }
 
     .hero-slides-text {
-        min-height: 180px;
+        min-height: 110px;
+        margin-bottom: 12px;
     }
 
-    .hero-pcard.pos-1 { top: 0; right: 5%; width: 130px; height: 170px; }
-    .hero-pcard.pos-2 { top: 15%; left: 0; width: 135px; height: 175px; }
-    .hero-pcard.pos-3 { top: 35%; right: 30%; width: 115px; height: 150px; }
-    .hero-pcard.pos-4 { bottom: 8%; left: 5%; width: 130px; height: 170px; }
-    .hero-pcard.pos-5 { bottom: 12%; right: 0; width: 125px; height: 160px; }
-
-    .hero-floating-tag-1, .hero-floating-tag-2 { display: none; }
-
-    .hero-stats {
-        gap: 16px;
+    /* Compact text on mobile */
+    .hero-modern-title {
+        font-size: clamp(20px, 5vw, 28px);
+        margin-bottom: 8px;
+        line-height: 1.05;
     }
 
-    .hero-stat strong { font-size: 22px; }
-}
+    .hero-modern-subtitle {
+        font-size: 12px;
+        line-height: 1.4;
+        max-width: 100%;
+    }
 
-@media (max-width: 600px) {
+    .hero-tag-modern {
+        font-size: 9px;
+        padding: 4px 10px;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-tag-dot {
+        width: 6px;
+        height: 6px;
+    }
+
     .hero-modern-actions {
-        flex-direction: column;
-        align-items: stretch;
         gap: 12px;
+        margin-bottom: 14px;
     }
 
     .hero-btn-primary {
-        justify-content: center;
+        padding: 8px 16px;
+        font-size: 12px;
+        gap: 6px;
     }
 
-    .hero-pcard.pos-1, .hero-pcard.pos-5 { width: 110px; height: 145px; }
+    .hero-btn-primary i { font-size: 11px; }
+
+    .hero-btn-link {
+        font-size: 11px;
+    }
+
+    .hero-stats {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hero-stat strong { font-size: 16px; }
+    .hero-stat span { font-size: 9px; }
+    .hero-stat-divider { height: 24px; }
+
+    .hero-page { width: 24px; height: 3px; }
+
+    /* Decorative blobs smaller */
+    .hero-deco-1 { width: 200px; height: 200px; top: -80px; left: -80px; }
+    .hero-deco-2 { width: 180px; height: 180px; bottom: -80px; right: 20%; }
+    .hero-deco-3 { display: none; }
+
+    /* Smaller floating product cards */
+    .hero-pcard.pos-1 { top: 0; right: 8%; width: 70px; height: 90px; }
+    .hero-pcard.pos-2 { top: 12%; left: 0; width: 78px; height: 100px; }
     .hero-pcard.pos-3 { display: none; }
+    .hero-pcard.pos-4 { bottom: 5%; left: 8%; width: 72px; height: 95px; }
+    .hero-pcard.pos-5 { bottom: 8%; right: 0; width: 68px; height: 88px; }
+
+    .hero-pcard-info {
+        padding: 4px 6px;
+    }
+
+    .hero-pcard-brand {
+        font-size: 7px;
+        margin-bottom: 1px;
+    }
+
+    .hero-pcard-price {
+        font-size: 10px;
+    }
+
+    .hero-floating-tag-1, .hero-floating-tag-2 { display: none; }
+}
+
+@media (max-width: 600px) {
+    .hero-modern {
+        min-height: 40vh;
+        max-height: 45vh;
+    }
+
+    .hero-modern-actions {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .hero-btn-primary {
+        padding: 7px 12px;
+        font-size: 11px;
+    }
+
+    .hero-btn-link {
+        font-size: 10px;
+    }
+
+    .hero-stats {
+        gap: 8px;
+    }
+
+    .hero-stat strong { font-size: 14px; }
+    .hero-stat span { font-size: 8px; }
+
+    /* Even smaller floating cards */
+    .hero-pcard.pos-1 { width: 58px; height: 75px; }
+    .hero-pcard.pos-2 { width: 65px; height: 84px; }
+    .hero-pcard.pos-4 { width: 60px; height: 78px; }
+    .hero-pcard.pos-5 { width: 56px; height: 72px; }
+
+    .hero-pcard-info { padding: 3px 5px; }
+    .hero-pcard-brand { font-size: 6px; }
+    .hero-pcard-price { font-size: 9px; }
 }
 
 /* ===== Hero Section (legacy - kept for backward compat) ===== */
