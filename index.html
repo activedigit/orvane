@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ORVANE - عطور لافيرن الفاخرة ومنتجات العناية والمكياج. تشكيلة واسعة من العطور الأصلية بأسعار مميزة.">
+    <title>ORVANE | عطور لافيرن الفاخرة - بشمولية</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <p><i class="fas fa-truck"></i> شحن مجاني للطلبات فوق 299 ₪ | هدية مع كل طلب</p>
+        </div>
+    </div>
+
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-links">
+                <a href="pages/contact.html"><i class="fas fa-headset"></i> خدمة العملاء</a>
+                <a href="#"><i class="fas fa-store"></i> الفروع</a>
+                <a href="pages/about.html"><i class="fas fa-info-circle"></i> عن ORVANE</a>
+            </div>
+            <div class="top-bar-links">
+                <a href="#"><i class="fas fa-truck"></i> تتبع الطلب</a>
+                <a href="#"><i class="far fa-question-circle"></i> الأسئلة الشائعة</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="ORVANE">
+            </a>
+
+            <!-- Search bar in header -->
+            <div class="header-search">
+                <form id="headerSearchForm">
+                    <input type="text" placeholder="ابحث عن عطر، كريم، ماركة..." autocomplete="off">
+                    <button type="submit" aria-label="بحث">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="action-btn" aria-label="حسابي">
+                    <i class="far fa-user"></i>
+                    <span class="label">حسابي</span>
+                </a>
+                <a href="#" class="action-btn" aria-label="المفضلة">
+                    <i class="far fa-heart"></i>
+                    <span class="label">المفضلة</span>
+                </a>
+                <a href="#" class="action-btn cart-btn" aria-label="سلة التسوق">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="label">سلة التسوق</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Navigation Bar -->
+    <nav class="category-nav">
+        <div class="container">
+            <ul class="main-nav-list" id="mainNav">
+                <li><a href="pages/products.html" class="all-categories"><i class="fas fa-th"></i> كل الأقسام</a></li>
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="pages/products.html?cat=new" style="color:var(--color-accent);">وصل حديثاً <i class="fas fa-bolt"></i></a></li>
+                <li><a href="pages/products.html?cat=bestseller">الأكثر مبيعاً</a></li>
+                <li class="has-dropdown">
+                    <a href="pages/products.html?cat=perfumes">العطور <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="pages/products.html?cat=women">عطور نسائية</a></li>
+                        <li><a href="pages/products.html?cat=men">عطور رجالية</a></li>
+                        <li><a href="pages/products.html?cat=unisex">عطور للجنسين</a></li>
+                        <li><a href="pages/products.html?cat=bakhoor">بخور ومسك</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="pages/products.html?cat=makeup">المكياج <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="pages/products.html?cat=eyes">العيون</a></li>
+                        <li><a href="pages/products.html?cat=face">الوجه</a></li>
+                        <li><a href="pages/products.html?cat=lips">الشفاه</a></li>
+                        <li><a href="pages/products.html?cat=cheeks">الخدود</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="pages/products.html?cat=care">العناية <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="pages/products.html?cat=skin">العناية بالبشرة</a></li>
+                        <li><a href="pages/products.html?cat=hair">العناية بالشعر</a></li>
+                        <li><a href="pages/products.html?cat=oral">العناية بالأسنان</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/products.html?cat=gifts">فن الإهداء</a></li>
+                <li><a href="pages/products.html?cat=sale" style="color:#ff6b6b;">تخفيضات <i class="fas fa-fire"></i></a></li>
+                <li><a href="pages/products.html?cat=brands">الماركات</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=1920&q=80');"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <span class="hero-eyebrow">عطور لافيرن الفاخرة</span>
+                        <h1>عطور تليق<br><span class="pink">بأناقتك</span></h1>
+                        <p>اكتشف تشكيلة Laverne الحصرية - عطور أصلية بأسعار لا تُقاوم</p>
+                        <a href="pages/products.html" class="btn btn-primary">تسوّق الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1920&q=80');"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <span class="hero-eyebrow">تخفيضات تصل إلى 32%</span>
+                        <h1>أجمل العطور<br><span class="pink">بأفضل الأسعار</span></h1>
+                        <p>اغتنم الفرصة - تشكيلة واسعة من عطور لافيرن مع خصومات حصرية</p>
+                        <a href="pages/products.html?cat=sale" class="btn btn-primary">عروض التخفيضات <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <button class="hero-dot active" data-slide="0"></button>
+            <button class="hero-dot" data-slide="1"></button>
+        </div>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features-bar">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div>
+                        <h4>شحن سريع</h4>
+                        <p>توصيل خلال 48 ساعة</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-gift"></i>
+                    <div>
+                        <h4>هدية مع كل طلب</h4>
+                        <p>عينات مجانية مختارة</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-undo"></i>
+                    <div>
+                        <h4>استرجاع مجاني</h4>
+                        <p>خلال 14 يوم بدون شروط</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lock"></i>
+                    <div>
+                        <h4>دفع آمن</h4>
+                        <p>تشفير SSL بنسبة 100%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="eyebrow">تسوّق بالأقسام</span>
+                    <h2>الأقسام الرئيسية</h2>
+                </div>
+                <a href="pages/products.html" class="view-all">جميع الأقسام</a>
+            </div>
+            <div class="categories-grid">
+                <a href="pages/products.html?cat=face" class="category-card" data-cat="face">
+                    <div class="category-icon-wrap">
+                        <img class="category-real-img" alt="العناية بالبشرة" loading="lazy">
+                        <i class="fas fa-droplet category-fallback-icon"></i>
+                    </div>
+                    <h3>العناية بالبشرة</h3>
+                    <span class="category-link" data-count="face">40+ منتج</span>
+                </a>
+                <a href="pages/products.html?cat=women" class="category-card" data-cat="women">
+                    <div class="category-icon-wrap">
+                        <img class="category-real-img" alt="عطور نسائية" loading="lazy">
+                        <i class="fas fa-spray-can-sparkles category-fallback-icon"></i>
+                    </div>
+                    <h3>عطور نسائية</h3>
+                    <span class="category-link" data-count="women">12 منتج</span>
+                </a>
+                <a href="pages/products.html?cat=men" class="category-card" data-cat="men">
+                    <div class="category-icon-wrap">
+                        <img class="category-real-img" alt="عطور رجالية" loading="lazy">
+                        <i class="fas fa-user-tie category-fallback-icon"></i>
+                    </div>
+                    <h3>عطور رجالية</h3>
+                    <span class="category-link" data-count="men">10 منتجات</span>
+                </a>
+                <a href="pages/products.html?cat=eye" class="category-card" data-cat="eye">
+                    <div class="category-icon-wrap">
+                        <img class="category-real-img" alt="كريمات العين" loading="lazy">
+                        <i class="fas fa-eye category-fallback-icon"></i>
+                    </div>
+                    <h3>كريمات العين</h3>
+                    <span class="category-link" data-count="eye">8 منتجات</span>
+                </a>
+                <a href="pages/products.html?cat=bakhoor" class="category-card" data-cat="bakhoor">
+                    <div class="category-icon-wrap">
+                        <img class="category-real-img" alt="بخور ومسك" loading="lazy">
+                        <i class="fas fa-fire-flame-curved category-fallback-icon"></i>
+                    </div>
+                    <h3>بخور ومسك</h3>
+                    <span class="category-link" data-count="bakhoor">3 منتجات</span>
+                </a>
+                <a href="pages/products.html?cat=gifts" class="category-card" data-cat="gifts">
+                    <div class="category-icon-wrap">
+                        <img class="category-real-img" alt="مجموعات هدايا" loading="lazy">
+                        <i class="fas fa-gift category-fallback-icon"></i>
+                    </div>
+                    <h3>مجموعات هدايا</h3>
+                    <span class="category-link" data-count="gifts">3 منتجات</span>
+                </a>
+                <a href="pages/products.html?cat=new" class="category-card" data-cat="new">
+                    <div class="category-icon-wrap">
+                        <img class="category-real-img" alt="وصل حديثاً" loading="lazy">
+                        <i class="fas fa-sparkles category-fallback-icon"></i>
+                    </div>
+                    <h3>وصل حديثاً</h3>
+                    <span class="category-link" data-count="new">جديد</span>
+                </a>
+            </div>
+
+            <!-- Dynamic category image loader -->
+            <script>
+                (function() {
+                    const matchers = {
+                        face:    p => p.category === 'face' && ['cream','serum','toner','cleanser','sunscreen','mask'].includes(p.type),
+                        women:   p => p.category === 'women' || (p.type === 'perfume' && /نسائي|نساء|للنساء/.test(p.name || '')),
+                        men:     p => p.category === 'men' || (p.type === 'perfume' && /رجالي|للرجال|للرجل/.test(p.name || '')),
+                        eye:     p => p.category === 'eye' || /(عين|للعين|للعيون|كحل|ماسكرا)/.test(p.name || ''),
+                        bakhoor: p => p.category === 'bakhoor' || p.type === 'bakhoor' || /(بخور|مسك)/.test(p.name || ''),
+                        gifts:   p => p.type === 'set' || /(مجموعة|باكدج|طقم|set|package|gift)/i.test(p.name || ''),
+                        new:     p => p.type === 'perfume' || p.type === 'serum'
+                    };
+
+                    function pickAndApply() {
+                        const data = window.PRODUCTS_DATA || [];
+                        if (data.length === 0) return false;
+
+                        document.querySelectorAll('.category-card[data-cat]').forEach(card => {
+                            const cat = card.dataset.cat;
+                            const matcher = matchers[cat];
+                            if (!matcher) return;
+
+                            const matching = data.filter(p =>
+                                p.image &&
+                                typeof p.image === 'string' &&
+                                p.image.startsWith('http') &&
+                                matcher(p)
+                            );
+
+                            if (matching.length === 0) return;
+
+                            // Stable pick (consistent across refreshes)
+                            const pickIdx = (cat.charCodeAt(0) * 13) % matching.length;
+                            const pick = matching[pickIdx] || matching[0];
+
+                            const img = card.querySelector('.category-real-img');
+                            if (img && pick.image) {
+                                img.addEventListener('load', () => img.classList.add('loaded'));
+                                img.addEventListener('error', () => img.style.display = 'none');
+                                img.src = pick.image;
+                            }
+
+                            // Update product count badge with actual count
+                            const countEl = card.querySelector('[data-count]');
+                            if (countEl && cat !== 'new') {
+                                countEl.textContent = matching.length.toLocaleString('ar-EG') + ' منتج';
+                            }
+                        });
+                        return true;
+                    }
+
+                    if (!pickAndApply()) {
+                        let attempts = 0;
+                        const interval = setInterval(() => {
+                            if (pickAndApply() || ++attempts > 30) clearInterval(interval);
+                        }, 100);
+                    }
+                })();
+            </script>
+        </div>
+    </section>
+
+    <!-- Brand Showcase Banner -->
+    <section style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); padding: 50px 0; text-align: center; margin: 0;">
+        <div class="container">
+            <span class="eyebrow light">العلامة التجارية الحصرية</span>
+            <h2 style="color: var(--color-accent); font-size: clamp(36px, 5vw, 60px); font-weight: 800; margin: 12px 0; letter-spacing: 0.1em;">LAVERNE</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 20px; font-size: 16px;">تشكيلة فاخرة من عطور لافيرن الأصلية - رفاهية لا مثيل لها بأسعار حصرية</p>
+            <a href="pages/products.html" class="btn btn-primary">استعرض تشكيلة لافيرن</a>
+        </div>
+    </section>
+
+    <!-- Featured Perfumes -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="eyebrow">الأكثر طلباً</span>
+                    <h2>عطور مختارة</h2>
+                </div>
+                <a href="pages/products.html?cat=perfumes" class="view-all">جميع العطور</a>
+            </div>
+            <div class="products-grid" id="perfumesGrid">
+                <!-- Products populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Split -->
+    <section class="banner-split">
+        <div class="banner-card banner-dark">
+            <div class="banner-content">
+                <span class="eyebrow light">للرجال</span>
+                <h2>عطور<br>كاريزمية</h2>
+                <p>عطور رجالية بشخصية قوية وحضور لا يُنسى</p>
+                <a href="pages/products.html?cat=men" class="btn btn-outline-light">للعطور الرجالية</a>
+            </div>
+        </div>
+        <div class="banner-card banner-light">
+            <div class="banner-content">
+                <span class="eyebrow">للنساء</span>
+                <h2>أنوثة<br>بلا حدود</h2>
+                <p>عطور نسائية ساحرة تعبر عن أناقتك المميزة</p>
+                <a href="pages/products.html?cat=women" class="btn btn-outline-dark">للعطور النسائية</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bakhoor Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="eyebrow">روائح شرقية أصيلة</span>
+                    <h2>البخور والمسك</h2>
+                </div>
+                <a href="pages/products.html?cat=bakhoor" class="view-all">جميع البخور</a>
+            </div>
+            <div class="products-grid" id="creamsGrid">
+                <!-- Products populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Brands -->
+    <section class="brands-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="eyebrow"><i class="fas fa-gem"></i> ماركات متميزة</span>
+                    <h2>براندات مميزة</h2>
+                </div>
+                <a href="pages/products.html?cat=brands" class="view-all">جميع الماركات</a>
+            </div>
+            <div class="brands-grid">
+                <a href="pages/products.html?brand=christian-breton" class="brand-card">
+                    <div class="brand-name brand-style-1">
+                        <span class="brand-primary">CHRISTIAN BRETON</span>
+                        <span class="brand-sub">PARIS</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=armaf" class="brand-card">
+                    <div class="brand-name brand-style-2">
+                        <span class="brand-primary">ARMAF</span>
+                        <span class="brand-sub">LUXURY FRENCH FRAGRANCES</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=assaf-watches" class="brand-card">
+                    <div class="brand-name brand-style-3">
+                        <span class="brand-icon">⌚</span>
+                        <span class="brand-primary-sm">Assaf Watches</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=assaf" class="brand-card">
+                    <div class="brand-name brand-style-4">
+                        <span class="brand-icon">◆</span>
+                        <span class="brand-primary">ASSAF</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=flormar" class="brand-card">
+                    <div class="brand-name brand-style-5">
+                        <span class="brand-primary-pink">flormar</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=laverne" class="brand-card brand-featured">
+                    <div class="brand-name brand-style-6">
+                        <span class="brand-primary">LAVERNE</span>
+                        <span class="brand-tag">حصري</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=dr-althea" class="brand-card">
+                    <div class="brand-name brand-style-7">
+                        <span class="brand-script">Dr. Althea</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=arencia" class="brand-card">
+                    <div class="brand-name brand-style-8">
+                        <span class="brand-elegant">Arencia</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=purito" class="brand-card">
+                    <div class="brand-name brand-style-9">
+                        <span class="brand-primary-sm">Purito</span>
+                        <span class="brand-sub-sm">SEOUL</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=beauty-of-joseon" class="brand-card">
+                    <div class="brand-name brand-style-10">
+                        <span class="brand-korean">조선미녀</span>
+                        <span class="brand-sub-sm">BEAUTY OF JOSEON</span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=medicube" class="brand-card">
+                    <div class="brand-name brand-style-11">
+                        <span class="brand-primary-sm">medicube<sup style="color:#e74c3c;">+</sup></span>
+                    </div>
+                </a>
+                <a href="pages/products.html?brand=purest-solutions" class="brand-card">
+                    <div class="brand-name brand-style-12">
+                        <span class="brand-the">the</span>
+                        <span class="brand-purest">purest</span>
+                        <span class="brand-solutions">solutions</span>
+                    </div>
+                </a>
+            </div>
+            <p style="text-align:center; margin-top:30px; font-size:13px; color:var(--color-text-light);" id="brandsNote">
+                * أسماء الماركات معروضة مؤقتاً كنص. ارفع الشعارات الرسمية من <a href="admin.html" style="color:var(--color-accent-dark); font-weight:600;">لوحة الإدارة</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Brand Logo Loader (uses uploaded logos from admin panel) -->
+    <script>
+        (function() {
+            try {
+                const brandLogos = JSON.parse(localStorage.getItem('orvane_brand_logos') || '{}');
+                const brandSlugMap = {
+                    'christian-breton': 'christian-breton',
+                    'armaf': 'armaf',
+                    'assaf-watches': 'assaf-watches',
+                    'assaf': 'assaf',
+                    'flormar': 'flormar',
+                    'laverne': 'laverne',
+                    'dr-althea': 'dr-althea',
+                    'arencia': 'arencia',
+                    'purito': 'purito',
+                    'beauty-of-joseon': 'beauty-of-joseon',
+                    'medicube': 'medicube',
+                    'purest-solutions': 'the-purest-solutions'
+                };
+                let loadedCount = 0;
+                document.querySelectorAll('.brand-card').forEach(card => {
+                    const href = card.getAttribute('href') || '';
+                    const m = href.match(/brand=([\w\-]+)/);
+                    if (!m) return;
+                    const linkSlug = m[1];
+                    const storageSlug = brandSlugMap[linkSlug] || linkSlug;
+                    const logo = brandLogos[storageSlug];
+                    if (logo) {
+                        const nameEl = card.querySelector('.brand-name');
+                        if (nameEl) {
+                            const tag = card.classList.contains('brand-featured')
+                                ? '<span class="brand-tag">حصري</span>'
+                                : '';
+                            nameEl.innerHTML = '<img src="' + logo + '" alt="brand logo" style="max-width:80%; max-height:75%; object-fit:contain;">' + tag;
+                            loadedCount++;
+                        }
+                    }
+                });
+                if (loadedCount > 0) {
+                    const note = document.getElementById('brandsNote');
+                    if (note && loadedCount === 12) {
+                        note.style.display = 'none';
+                    } else if (note) {
+                        note.innerHTML = '✓ تم تحميل ' + loadedCount + ' من 12 شعار رسمي. <a href="admin.html" style="color:var(--color-accent-dark); font-weight:600;">أكمل من لوحة الإدارة</a>.';
+                    }
+                }
+            } catch (e) { /* localStorage unavailable */ }
+        })();
+    </script>
+
+    <!-- Brand Story -->
+    <section class="brand-story">
+        <div class="container">
+            <div class="brand-story-grid">
+                <div class="brand-story-image" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%); aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; border-radius: 8px; position: relative; overflow: hidden;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" style="width:100%; height:100%; position:absolute; inset:0;">
+                        <defs>
+                            <radialGradient id="bsg1" cx="50%" cy="40%" r="70%">
+                                <stop offset="0%" stop-color="#f5b8c4" stop-opacity="0.15"/>
+                                <stop offset="100%" stop-color="#1a1a1a" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                        <rect width="400" height="500" fill="url(#bsg1)"/>
+                        <g transform="translate(150, 90)" opacity="0.6">
+                            <rect x="25" y="0" width="50" height="20" rx="3" fill="#f5b8c4" opacity="0.85"/>
+                            <rect x="20" y="20" width="60" height="18" fill="#f5b8c4" opacity="0.7"/>
+                            <rect x="15" y="38" width="70" height="35" rx="2" fill="#f5b8c4" opacity="0.8"/>
+                            <path d="M 0 75 Q -5 75 -5 90 L -5 270 Q -5 290 15 290 L 85 290 Q 105 290 105 270 L 105 90 Q 105 75 100 75 Z" fill="#f5b8c4" opacity="0.55"/>
+                            <rect x="15" y="155" width="70" height="80" fill="#f5b8c4" opacity="0.25"/>
+                            <text x="50" y="190" text-anchor="middle" fill="#1a1a1a" font-family="serif" font-size="14" font-weight="700" letter-spacing="3">LAVERNE</text>
+                            <line x1="25" y1="200" x2="75" y2="200" stroke="#1a1a1a" stroke-width="0.7" opacity="0.7"/>
+                            <text x="50" y="218" text-anchor="middle" fill="#1a1a1a" font-family="sans-serif" font-size="7" letter-spacing="2" opacity="0.85">PARIS</text>
+                        </g>
+                        <text x="200" y="410" text-anchor="middle" fill="#f5b8c4" font-family="Cormorant Garamond, serif" font-size="34" font-weight="700" letter-spacing="10">ORVANE</text>
+                        <line x1="155" y1="425" x2="245" y2="425" stroke="#f5b8c4" stroke-width="0.8" opacity="0.4"/>
+                        <text x="200" y="448" text-anchor="middle" fill="#ffffff" opacity="0.5" font-family="sans-serif" font-size="10" letter-spacing="4">EXCLUSIVE LAVERNE PARTNER</text>
+                    </svg>
+                </div>
+                <div class="brand-story-content">
+                    <span class="eyebrow">من نحن</span>
+                    <h2>ORVANE - وكلاء حصريون</h2>
+                    <p>نحن في ORVANE نفخر بتقديم تشكيلة Laverne الفاخرة في فلسطين والمنطقة. كوكلاء حصريين، نضمن لكم وصول العطور الأصلية مباشرة من المصدر بأفضل الأسعار وأعلى الجودة.</p>
+                    <p>كل عطر في تشكيلتنا تم اختياره بعناية ليلبي ذوقكم الراقي. من العطور الكلاسيكية الخالدة إلى الإصدارات العصرية الجريئة - عندنا ما يناسب كل شخصية.</p>
+                    <a href="pages/about.html" class="btn btn-dark">تعرف علينا أكثر</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="products-section gray-bg">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="eyebrow">الأكثر مبيعاً</span>
+                    <h2>أبرز منتجات الشهر</h2>
+                </div>
+                <a href="pages/products.html?cat=bestseller" class="view-all">جميع المنتجات</a>
+            </div>
+            <div class="products-grid" id="bestsellersGrid">
+                <!-- Products populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="eyebrow">آراء عملائنا</span>
+                    <h2>ماذا يقولون عنّا</h2>
+                </div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"عطر Loyard Collection أصبح عطري المفضل. ثبات ممتاز ورائحة فاخرة تدوم طوال اليوم. أنصح به بشدة!"</p>
+                    <span class="testimonial-name">— سارة م.</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"خدمة ممتازة وتوصيل سريع. عطر Scarface أكثر من رائع - رائحة رجولية بحضور قوي."</p>
+                    <span class="testimonial-name">— أحمد ع.</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"بخور Hertaj رائحته أصلية ومميزة جداً. الأسعار معقولة جداً مقارنة بالجودة. متجر موثوق!"</p>
+                    <span class="testimonial-name">— نور ح.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <span class="eyebrow light">خصم 10%</span>
+                <h2>انضم لنادي ORVANE</h2>
+                <p>اشترك في النشرة البريدية واحصل على خصم 10% على طلبك الأول، وآخر العروض والمنتجات الجديدة</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <button type="submit">اشترك</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <img src="assets/logo.png" alt="ORVANE" class="footer-logo">
+                    <p>وكلاء حصريون لعطور Laverne الفاخرة. نقدم لكم أجمل العطور والمنتجات الأصلية بأفضل الأسعار.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>تسوّق</h4>
+                    <ul>
+                        <li><a href="pages/products.html?cat=women">عطور نسائية</a></li>
+                        <li><a href="pages/products.html?cat=men">عطور رجالية</a></li>
+                        <li><a href="pages/products.html?cat=unisex">عطور للجنسين</a></li>
+                        <li><a href="pages/products.html?cat=bakhoor">بخور ومسك</a></li>
+                        <li><a href="pages/products.html?cat=gifts">مجموعات الإهداء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="pages/contact.html">اتصل بنا</a></li>
+                        <li><a href="#">الشحن والإرجاع</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">تتبع الطلب</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>عن ORVANE</h4>
+                    <ul>
+                        <li><a href="pages/about.html">من نحن</a></li>
+                        <li><a href="#">وظائف</a></li>
+                        <li><a href="#">المدوّنة</a></li>
+                        <li><a href="#">الصحافة</a></li>
+                        <li><a href="#">الاستدامة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 1234567-03</li>
+                        <li><i class="fas fa-envelope"></i> info@orvane.co.il</li>
+                        <li><i class="fas fa-map-marker-alt"></i> رام الله، فلسطين</li>
+                        <li><i class="fas fa-clock"></i> السبت - الخميس 09:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ORVANE. جميع الحقوق محفوظة.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quickViewModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

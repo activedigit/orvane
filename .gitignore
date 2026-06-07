@@ -1,0 +1,45 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+package-lock.json
+npm-debug.log
+yarn-error.log
+
+# Claude Code internal
+.claude/
+.claude-code/
+
+# Other side projects accidentally in this folder
+MATSBEN/
+
+# Source data + intermediate (regenerable via import_csv.js)
+lifestyle_products.csv
+products.json
+
+# Original logo screenshot (replaced by assets/logo.png)
+צילום מסך*.png
+"צילום מסך"*
+
+# Local environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Build artifacts (if any)
+dist/
+build/

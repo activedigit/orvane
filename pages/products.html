@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات | ORVANE</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <p><i class="fas fa-truck"></i> شحن مجاني للطلبات فوق 299 ₪ | هدية مع كل طلب</p>
+        </div>
+    </div>
+
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-links">
+                <a href="contact.html"><i class="fas fa-headset"></i> خدمة العملاء</a>
+                <a href="#"><i class="fas fa-store"></i> الفروع</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> عن ORVANE</a>
+            </div>
+            <div class="top-bar-links">
+                <a href="#"><i class="fas fa-truck"></i> تتبع الطلب</a>
+                <a href="#"><i class="far fa-question-circle"></i> الأسئلة الشائعة</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="ORVANE">
+            </a>
+
+            <div class="header-search">
+                <form id="headerSearchForm">
+                    <input type="text" placeholder="ابحث عن عطر، كريم، ماركة..." autocomplete="off">
+                    <button type="submit" aria-label="بحث">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="action-btn" aria-label="حسابي">
+                    <i class="far fa-user"></i>
+                    <span class="label">حسابي</span>
+                </a>
+                <a href="#" class="action-btn" aria-label="المفضلة">
+                    <i class="far fa-heart"></i>
+                    <span class="label">المفضلة</span>
+                </a>
+                <a href="#" class="action-btn cart-btn" aria-label="سلة التسوق">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="label">سلة التسوق</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav">
+        <div class="container">
+            <ul class="main-nav-list" id="mainNav">
+                <li><a href="products.html" class="all-categories"><i class="fas fa-th"></i> كل الأقسام</a></li>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="products.html?cat=new" style="color:var(--color-accent);">وصل حديثاً <i class="fas fa-bolt"></i></a></li>
+                <li><a href="products.html?cat=bestseller">الأكثر مبيعاً</a></li>
+                <li class="has-dropdown">
+                    <a href="products.html?cat=perfumes" class="active">العطور <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="products.html?cat=women">عطور نسائية</a></li>
+                        <li><a href="products.html?cat=men">عطور رجالية</a></li>
+                        <li><a href="products.html?cat=unisex">عطور للجنسين</a></li>
+                        <li><a href="products.html?cat=bakhoor">بخور ومسك</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="products.html?cat=makeup">المكياج <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="products.html?cat=eyes">العيون</a></li>
+                        <li><a href="products.html?cat=face">الوجه</a></li>
+                        <li><a href="products.html?cat=lips">الشفاه</a></li>
+                        <li><a href="products.html?cat=cheeks">الخدود</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="products.html?cat=care">العناية <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="products.html?cat=skin">العناية بالبشرة</a></li>
+                        <li><a href="products.html?cat=hair">العناية بالشعر</a></li>
+                        <li><a href="products.html?cat=oral">العناية بالأسنان</a></li>
+                    </ul>
+                </li>
+                <li><a href="products.html?cat=gifts">فن الإهداء</a></li>
+                <li><a href="products.html?cat=sale" style="color:#ff6b6b;">تخفيضات <i class="fas fa-fire"></i></a></li>
+                <li><a href="products.html?cat=brands">الماركات</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <section class="page-heading">
+        <div class="container">
+            <h1 id="productsPageTitle">جميع المنتجات</h1>
+            <div class="breadcrumbs">
+                <a href="../index.html">الرئيسية</a>
+                <span>/</span>
+                <span>المنتجات</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Listing -->
+    <section class="products-page">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h4>بحث</h4>
+                        <input type="search" id="productsSearchInput" placeholder="🔍 ابحث في المنتجات...">
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>القسم</h4>
+                        <div class="filter-list">
+                            <label>
+                                <input type="radio" name="category-filter" value="all" checked>
+                                <span>الكل</span>
+                                <span class="filter-count">(85)</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category-filter" value="face">
+                                <span>العناية بالبشرة</span>
+                                <span class="filter-count">(40+)</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category-filter" value="eye">
+                                <span>كريمات العين</span>
+                                <span class="filter-count">(8)</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category-filter" value="women">
+                                <span>عطور نسائية</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category-filter" value="men">
+                                <span>عطور رجالية</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category-filter" value="unisex">
+                                <span>عطور للجنسين</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category-filter" value="bakhoor">
+                                <span>بخور ومسك</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category-filter" value="sets">
+                                <span>مجموعات هدايا</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category-filter" value="lips">
+                                <span>الشفاه</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>نوع المنتج</h4>
+                        <div class="filter-list">
+                            <label>
+                                <input type="checkbox" name="type-filter" value="perfume">
+                                <span>عطر</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type-filter" value="bodyspray">
+                                <span>بخاخ معطر</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type-filter" value="bakhoor">
+                                <span>بخور</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type-filter" value="serum">
+                                <span>سيروم</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type-filter" value="cream">
+                                <span>كريم</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type-filter" value="toner">
+                                <span>تونر</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type-filter" value="cleanser">
+                                <span>غسول</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type-filter" value="sunscreen">
+                                <span>واقي شمس</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type-filter" value="set">
+                                <span>مجموعة هدايا</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>نطاق السعر</h4>
+                        <div class="filter-list">
+                            <input type="range" id="priceRange" min="10" max="500" value="500" step="10" style="width:100%; accent-color: var(--color-accent-dark);">
+                            <p id="priceValue" style="margin-top:8px; font-size:14px; color:var(--color-text-light);">حتى 500 ₪</p>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>الماركة</h4>
+                        <div class="filter-list" id="dynamicBrandList" style="max-height: 280px; overflow-y: auto;">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>عروض خاصة</h4>
+                        <div class="filter-list">
+                            <label>
+                                <input type="checkbox">
+                                <span>تخفيضات فقط</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>وصل حديثاً</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>الأكثر مبيعاً</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Main -->
+                <div class="products-main">
+                    <div class="products-toolbar">
+                        <div class="results-count" id="resultsCount">عرض 12 منتج</div>
+                        <select class="sort-select" id="sortSelect">
+                            <option value="popular">الأكثر شعبية</option>
+                            <option value="newest">وصل حديثاً</option>
+                            <option value="price-low">السعر: من الأقل للأعلى</option>
+                            <option value="price-high">السعر: من الأعلى للأقل</option>
+                            <option value="rating">أعلى تقييم</option>
+                        </select>
+                    </div>
+
+                    <div class="products-grid" id="productsListing">
+                        <!-- Products rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <span class="eyebrow light">خصم 10%</span>
+                <h2>انضم لنادي ORVANE</h2>
+                <p>اشترك في النشرة البريدية واحصل على خصم 10% على طلبك الأول</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <button type="submit">اشترك</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <img src="../assets/logo.png" alt="ORVANE" class="footer-logo">
+                    <p>وكلاء حصريون لعطور Laverne الفاخرة. نقدم لكم أجمل العطور والمنتجات الأصلية بأفضل الأسعار.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>تسوّق</h4>
+                    <ul>
+                        <li><a href="products.html?cat=women">عطور نسائية</a></li>
+                        <li><a href="products.html?cat=men">عطور رجالية</a></li>
+                        <li><a href="products.html?cat=unisex">عطور للجنسين</a></li>
+                        <li><a href="products.html?cat=bakhoor">بخور ومسك</a></li>
+                        <li><a href="products.html?cat=gifts">مجموعات الإهداء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="#">الشحن والإرجاع</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">تتبع الطلب</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>عن ORVANE</h4>
+                    <ul>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="#">وظائف</a></li>
+                        <li><a href="#">المدوّنة</a></li>
+                        <li><a href="#">الصحافة</a></li>
+                        <li><a href="#">الاستدامة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 1234567-03</li>
+                        <li><i class="fas fa-envelope"></i> info@orvane.co.il</li>
+                        <li><i class="fas fa-map-marker-alt"></i> رام الله، فلسطين</li>
+                        <li><i class="fas fa-clock"></i> السبت - الخميس 09:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ORVANE. جميع الحقوق محفوظة.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quickViewModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="../js/products-data.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

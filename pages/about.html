@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن | ORVANE</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        <div class="container">
+            <p><i class="fas fa-truck"></i> شحن مجاني للطلبات فوق 299 ₪ | هدية مع كل طلب</p>
+        </div>
+    </div>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-links">
+                <a href="contact.html"><i class="fas fa-headset"></i> خدمة العملاء</a>
+                <a href="#"><i class="fas fa-store"></i> الفروع</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> عن ORVANE</a>
+            </div>
+            <div class="top-bar-links">
+                <a href="#"><i class="fas fa-truck"></i> تتبع الطلب</a>
+                <a href="#"><i class="far fa-question-circle"></i> الأسئلة الشائعة</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container header-container">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="ORVANE">
+            </a>
+
+            <div class="header-search">
+                <form id="headerSearchForm">
+                    <input type="text" placeholder="ابحث عن عطر، كريم، ماركة..." autocomplete="off">
+                    <button type="submit" aria-label="بحث">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="action-btn" aria-label="حسابي">
+                    <i class="far fa-user"></i>
+                    <span class="label">حسابي</span>
+                </a>
+                <a href="#" class="action-btn" aria-label="المفضلة">
+                    <i class="far fa-heart"></i>
+                    <span class="label">المفضلة</span>
+                </a>
+                <a href="#" class="action-btn cart-btn" aria-label="سلة التسوق">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="label">سلة التسوق</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container">
+            <ul class="main-nav-list" id="mainNav">
+                <li><a href="products.html" class="all-categories"><i class="fas fa-th"></i> كل الأقسام</a></li>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="products.html?cat=new" style="color:var(--color-accent);">وصل حديثاً <i class="fas fa-bolt"></i></a></li>
+                <li><a href="products.html?cat=bestseller">الأكثر مبيعاً</a></li>
+                <li class="has-dropdown">
+                    <a href="products.html?cat=perfumes">العطور <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="products.html?cat=women">عطور نسائية</a></li>
+                        <li><a href="products.html?cat=men">عطور رجالية</a></li>
+                        <li><a href="products.html?cat=unisex">عطور للجنسين</a></li>
+                        <li><a href="products.html?cat=bakhoor">بخور ومسك</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="products.html?cat=makeup">المكياج <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="products.html?cat=eyes">العيون</a></li>
+                        <li><a href="products.html?cat=face">الوجه</a></li>
+                        <li><a href="products.html?cat=lips">الشفاه</a></li>
+                        <li><a href="products.html?cat=cheeks">الخدود</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="products.html?cat=care">العناية <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="products.html?cat=skin">العناية بالبشرة</a></li>
+                        <li><a href="products.html?cat=hair">العناية بالشعر</a></li>
+                        <li><a href="products.html?cat=oral">العناية بالأسنان</a></li>
+                    </ul>
+                </li>
+                <li><a href="products.html?cat=gifts">فن الإهداء</a></li>
+                <li><a href="products.html?cat=sale" style="color:#ff6b6b;">تخفيضات <i class="fas fa-fire"></i></a></li>
+                <li><a href="about.html" class="active">من نحن</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <section class="page-heading" style="background-image: linear-gradient(rgba(245,245,245,0.85), rgba(245,245,245,0.85)), url('https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=1920&q=80');">
+        <div class="container">
+            <h1>قصة ORVANE</h1>
+            <div class="breadcrumbs">
+                <a href="../index.html">الرئيسية</a>
+                <span>/</span>
+                <span>من نحن</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Intro -->
+    <section class="about-intro">
+        <div class="container">
+            <div class="about-content">
+                <span class="eyebrow">قصتنا</span>
+                <h2>فن العطر، شغف الجمال</h2>
+                <p>ORVANE هي أكثر من مجرد علامة تجارية - إنها تجربة حياة. وُلدنا من حبٍ عميقٍ للتفاصيل الصغيرة التي تصنع الفارق الكبير، ومن شغفٍ بالجودة الراقية، ومن رؤيةٍ لخلق تجارب عطرية تُرافق العميل في كل لحظة من يومه.</p>
+                <p>كوكلاء حصريين لعطور Laverne الفاخرة، نحرص على توفير منتجات أصلية 100% بأسعار تنافسية تجعل الفخامة في متناول الجميع. كل عطر في تشكيلتنا يحمل قصة، وكل قطرة منه تعكس اهتمامنا الدقيق بالجودة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section class="brand-story" style="padding: 60px 0;">
+        <div class="container">
+            <div class="brand-story-grid">
+                <div class="brand-story-content">
+                    <span class="eyebrow">رحلتنا</span>
+                    <h2>من الرؤية إلى التشكيلة</h2>
+                    <p>بدأت رحلتنا بحلمٍ بسيط - تقديم العطور الفاخرة بطريقة تليق بالعميل العربي. عبر شراكتنا الحصرية مع Laverne، استطعنا بناء جسرٍ بين أرقى عطور العالم وأذواقكم الراقية.</p>
+                    <p>اليوم، نفتخر بكوننا الوكيل المعتمد لتشكيلة Laverne في فلسطين والمنطقة، نوفر لكم أكثر من 100 منتج أصلي مع ضمان الجودة والسعر التنافسي.</p>
+                    <a href="products.html" class="btn btn-dark">استعرض التشكيلة</a>
+                </div>
+                <div class="brand-story-image">
+                    <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800&q=80" alt="رحلة ORVANE">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="about-values">
+        <div class="container">
+            <div class="section-header" style="border:none; justify-content:center;">
+                <div style="text-align:center; width:100%;">
+                    <span class="eyebrow">قيمنا</span>
+                    <h2>ما يحرّكنا</h2>
+                </div>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>أصالة وجودة</h3>
+                    <p>جميع منتجاتنا أصلية 100% ومستوردة مباشرة من Laverne. نضمن لكم الجودة وأصالة كل قطرة عطر.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>أسعار تنافسية</h3>
+                    <p>كوكلاء حصريين، نوفر لكم أفضل الأسعار في السوق مع ضمان نفس الجودة العالمية.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>شحن سريع</h3>
+                    <p>توصيل لجميع المدن خلال 48 ساعة كحد أقصى. شحن مجاني للطلبات فوق 299 ₪.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>فخامة في المتناول</h3>
+                    <p>نؤمن بأن الفخامة الحقيقية يجب أن تكون متاحة للجميع. أسعار عادلة لمنتجات راقية حقاً.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>خدمة شخصية</h3>
+                    <p>فريق خبراء متاح للإجابة على أسئلتكم وتقديم النصائح. تجربتكم تهمّنا شخصياً.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>تطور مستمر</h3>
+                    <p>نُحدّث تشكيلتنا باستمرار مع أحدث إصدارات Laverne لنوفر لكم كل جديد ومميز.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="about-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">+50K</div>
+                    <div class="stat-label">عميل راضٍ</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+100</div>
+                    <div class="stat-label">منتج في التشكيلة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+15</div>
+                    <div class="stat-label">عام من الخبرة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">تقييم إيجابي</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="about-intro" style="background-color: var(--color-bg-soft);">
+        <div class="container">
+            <div class="about-content">
+                <i class="fas fa-quote-right" style="font-size: 40px; color: var(--color-accent); margin-bottom: 24px;"></i>
+                <h2 style="font-style: italic; font-size: clamp(24px, 3.5vw, 36px);">"نحن لا نبيع عطوراً، نحن نبيع تجارب وذكريات ولحظات تبقى في الذاكرة."</h2>
+                <p style="margin-top: 30px; font-weight: 700; color: var(--color-text);">— مؤسسو ORVANE</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <span class="eyebrow light">خصم 10%</span>
+                <h2>انضم لنادي ORVANE</h2>
+                <p>اشترك في النشرة البريدية واحصل على خصم 10% على طلبك الأول</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <button type="submit">اشترك</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <img src="../assets/logo.png" alt="ORVANE" class="footer-logo">
+                    <p>وكلاء حصريون لعطور Laverne الفاخرة. نقدم لكم أجمل العطور والمنتجات الأصلية بأفضل الأسعار.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>تسوّق</h4>
+                    <ul>
+                        <li><a href="products.html?cat=women">عطور نسائية</a></li>
+                        <li><a href="products.html?cat=men">عطور رجالية</a></li>
+                        <li><a href="products.html?cat=unisex">عطور للجنسين</a></li>
+                        <li><a href="products.html?cat=bakhoor">بخور ومسك</a></li>
+                        <li><a href="products.html?cat=gifts">مجموعات الإهداء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="#">الشحن والإرجاع</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">تتبع الطلب</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>عن ORVANE</h4>
+                    <ul>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="#">وظائف</a></li>
+                        <li><a href="#">المدوّنة</a></li>
+                        <li><a href="#">الصحافة</a></li>
+                        <li><a href="#">الاستدامة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 1234567-03</li>
+                        <li><i class="fas fa-envelope"></i> info@orvane.co.il</li>
+                        <li><i class="fas fa-map-marker-alt"></i> رام الله، فلسطين</li>
+                        <li><i class="fas fa-clock"></i> السبت - الخميس 09:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ORVANE. جميع الحقوق محفوظة.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/products-data.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

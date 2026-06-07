@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا | ORVANE</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        <div class="container">
+            <p><i class="fas fa-truck"></i> شحن مجاني للطلبات فوق 299 ₪ | هدية مع كل طلب</p>
+        </div>
+    </div>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-links">
+                <a href="contact.html"><i class="fas fa-headset"></i> خدمة العملاء</a>
+                <a href="#"><i class="fas fa-store"></i> الفروع</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> عن ORVANE</a>
+            </div>
+            <div class="top-bar-links">
+                <a href="#"><i class="fas fa-truck"></i> تتبع الطلب</a>
+                <a href="#"><i class="far fa-question-circle"></i> الأسئلة الشائعة</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container header-container">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="ORVANE">
+            </a>
+
+            <div class="header-search">
+                <form id="headerSearchForm">
+                    <input type="text" placeholder="ابحث عن عطر، كريم، ماركة..." autocomplete="off">
+                    <button type="submit" aria-label="بحث">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="action-btn" aria-label="حسابي">
+                    <i class="far fa-user"></i>
+                    <span class="label">حسابي</span>
+                </a>
+                <a href="#" class="action-btn" aria-label="المفضلة">
+                    <i class="far fa-heart"></i>
+                    <span class="label">المفضلة</span>
+                </a>
+                <a href="#" class="action-btn cart-btn" aria-label="سلة التسوق">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="label">سلة التسوق</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container">
+            <ul class="main-nav-list" id="mainNav">
+                <li><a href="products.html" class="all-categories"><i class="fas fa-th"></i> كل الأقسام</a></li>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="products.html?cat=new" style="color:var(--color-accent);">وصل حديثاً <i class="fas fa-bolt"></i></a></li>
+                <li><a href="products.html?cat=bestseller">الأكثر مبيعاً</a></li>
+                <li class="has-dropdown">
+                    <a href="products.html?cat=perfumes">العطور <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="products.html?cat=women">عطور نسائية</a></li>
+                        <li><a href="products.html?cat=men">عطور رجالية</a></li>
+                        <li><a href="products.html?cat=unisex">عطور للجنسين</a></li>
+                        <li><a href="products.html?cat=bakhoor">بخور ومسك</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="products.html?cat=makeup">المكياج <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="products.html?cat=eyes">العيون</a></li>
+                        <li><a href="products.html?cat=face">الوجه</a></li>
+                        <li><a href="products.html?cat=lips">الشفاه</a></li>
+                        <li><a href="products.html?cat=cheeks">الخدود</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="products.html?cat=care">العناية <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="products.html?cat=skin">العناية بالبشرة</a></li>
+                        <li><a href="products.html?cat=hair">العناية بالشعر</a></li>
+                        <li><a href="products.html?cat=oral">العناية بالأسنان</a></li>
+                    </ul>
+                </li>
+                <li><a href="products.html?cat=gifts">فن الإهداء</a></li>
+                <li><a href="products.html?cat=sale" style="color:#ff6b6b;">تخفيضات <i class="fas fa-fire"></i></a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html" class="active">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <section class="page-heading">
+        <div class="container">
+            <h1>اتصل بنا</h1>
+            <div class="breadcrumbs">
+                <a href="../index.html">الرئيسية</a>
+                <span>/</span>
+                <span>اتصل بنا</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-block">
+                    <span class="eyebrow">تواصل معنا</span>
+                    <h2>يسعدنا خدمتكم</h2>
+                    <p>فريق خدمة العملاء لدينا متاح لتلقي استفساراتكم، تقديم النصائح، أو مساعدتكم في طلباتكم الخاصة. نحن هنا من أجلكم - دائماً.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>الهاتف</h4>
+                                <p>1234567-03</p>
+                                <p>أوقات العمل: السبت - الخميس 09:00-18:00</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>البريد الإلكتروني</h4>
+                                <p>info@orvane.co.il</p>
+                                <p>الرد خلال 24 ساعة</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>العنوان</h4>
+                                <p>شارع الإرسال، رام الله</p>
+                                <p>فلسطين</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>واتساب</h4>
+                                <p>1234567-052</p>
+                                <p>متاحون للرد طوال اليوم</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 36px;">
+                        <h4 style="margin-bottom: 16px; font-size: 15px;">تابعنا على وسائل التواصل</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram" style="background-color: var(--color-accent-light); color: var(--color-accent-dark);"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook" style="background-color: var(--color-accent-light); color: var(--color-accent-dark);"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="TikTok" style="background-color: var(--color-accent-light); color: var(--color-accent-dark);"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" aria-label="WhatsApp" style="background-color: var(--color-accent-light); color: var(--color-accent-dark);"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="font-size: 24px; margin-bottom: 24px;">أرسل لنا رسالة</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">الاسم الأول*</label>
+                                <input type="text" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">اسم العائلة*</label>
+                                <input type="text" id="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني*</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" id="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">الموضوع*</label>
+                            <select id="subject" required>
+                                <option value="">اختر الموضوع</option>
+                                <option>استفسار عام</option>
+                                <option>طلب وشحن</option>
+                                <option>إرجاع واستبدال</option>
+                                <option>شراكة تجارية</option>
+                                <option>شكوى</option>
+                                <option>أخرى</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">الرسالة*</label>
+                            <textarea id="message" rows="5" required placeholder="أخبرنا كيف يمكننا مساعدتك..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark" style="width: 100%;">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section style="height: 400px; position: relative;">
+        <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=35.198%2C31.898%2C35.224%2C31.912&layer=mapnik"
+            style="width: 100%; height: 100%; border: 0;"
+            loading="lazy"
+            title="موقع ORVANE - رام الله">
+        </iframe>
+    </section>
+
+    <!-- FAQ Quick Links -->
+    <section style="padding: 60px 0; background-color: var(--color-bg-soft);">
+        <div class="container">
+            <div class="section-header" style="border:none; justify-content:center;">
+                <div style="text-align:center; width:100%;">
+                    <span class="eyebrow">الأسئلة الشائعة</span>
+                    <h2>ربما تجد الإجابة هنا</h2>
+                </div>
+            </div>
+            <div class="values-grid">
+                <div class="value-card" style="background-color: white; padding: 30px;">
+                    <i class="fas fa-truck-fast" style="font-size: 36px; color: var(--color-accent-dark); margin-bottom: 16px;"></i>
+                    <h3>مدة الشحن</h3>
+                    <p>يتم الشحن خلال 1-3 أيام عمل لجميع المدن. شحن مجاني للطلبات فوق 299 ₪.</p>
+                </div>
+                <div class="value-card" style="background-color: white; padding: 30px;">
+                    <i class="fas fa-rotate-left" style="font-size: 36px; color: var(--color-accent-dark); margin-bottom: 16px;"></i>
+                    <h3>الإرجاع والاستبدال</h3>
+                    <p>يمكنك إرجاع أي منتج غير مفتوح خلال 14 يوماً من استلام الطلب لاسترداد كامل المبلغ.</p>
+                </div>
+                <div class="value-card" style="background-color: white; padding: 30px;">
+                    <i class="fas fa-shield-halved" style="font-size: 36px; color: var(--color-accent-dark); margin-bottom: 16px;"></i>
+                    <h3>دفع آمن</h3>
+                    <p>جميع المعاملات محمية بتشفير SSL ومحفوظة بحسب معايير PCI-DSS الأمنية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <img src="../assets/logo.png" alt="ORVANE" class="footer-logo">
+                    <p>وكلاء حصريون لعطور Laverne الفاخرة. نقدم لكم أجمل العطور والمنتجات الأصلية بأفضل الأسعار.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>تسوّق</h4>
+                    <ul>
+                        <li><a href="products.html?cat=women">عطور نسائية</a></li>
+                        <li><a href="products.html?cat=men">عطور رجالية</a></li>
+                        <li><a href="products.html?cat=unisex">عطور للجنسين</a></li>
+                        <li><a href="products.html?cat=bakhoor">بخور ومسك</a></li>
+                        <li><a href="products.html?cat=gifts">مجموعات الإهداء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="#">الشحن والإرجاع</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">تتبع الطلب</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>عن ORVANE</h4>
+                    <ul>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="#">وظائف</a></li>
+                        <li><a href="#">المدوّنة</a></li>
+                        <li><a href="#">الصحافة</a></li>
+                        <li><a href="#">الاستدامة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 1234567-03</li>
+                        <li><i class="fas fa-envelope"></i> info@orvane.co.il</li>
+                        <li><i class="fas fa-map-marker-alt"></i> رام الله، فلسطين</li>
+                        <li><i class="fas fa-clock"></i> السبت - الخميس 09:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ORVANE. جميع الحقوق محفوظة.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/products-data.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
