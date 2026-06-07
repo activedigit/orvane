@@ -3304,6 +3304,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    /* Categories grid: 3 per row on mobile */
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .category-card {
+        padding: 12px 6px;
+    }
+
+    .category-icon-wrap {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    .category-icon-wrap i {
+        font-size: 28px;
+    }
+
+    .category-card h3 {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .category-link {
+        font-size: 10px;
+    }
+
     .mobile-menu-toggle,
     .close-nav {
         display: inline-flex;
@@ -3419,11 +3448,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 60px 0;
     }
 
-    .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
+    /* Categories keep 3 per row on mobile (set in previous rule) */
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -3508,7 +3533,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
-    .categories-grid,
+    /* Categories stay at 3 per row even on very small screens */
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .category-card {
+        padding: 10px 4px;
+    }
+
+    .category-icon-wrap {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 8px;
+    }
+
+    .category-icon-wrap i {
+        font-size: 24px;
+    }
+
+    .category-card h3 {
+        font-size: 11px;
+    }
+
+    .category-link {
+        font-size: 9px;
+    }
+
     .products-grid {
         grid-template-columns: 1fr;
     }
