@@ -3554,18 +3554,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 968px) {
+    /* Convert brand grid to a horizontal auto-sliding marquee */
+    .brands-section .container {
+        overflow: hidden;
+    }
+
     .brands-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
+        display: flex;
+        grid-template-columns: none;
+        gap: 8px;
+        flex-wrap: nowrap;
+        width: max-content;
+        animation: brands-marquee 35s linear infinite;
     }
 
+    .brands-grid:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes brands-marquee {
+        from { transform: translateX(0); }
+        to   { transform: translateX(50%); }
+    }
+
+    /* 5 cards visible at once */
+    .brand-card {
+        flex: 0 0 calc((100vw - 64px) / 5);
+        width: calc((100vw - 64px) / 5);
+        height: auto;
+        aspect-ratio: 1;
+        padding: 6px;
+        min-width: 0;
+        max-width: 90px;
+    }
+
+    /* Smaller text inside brand cards */
     .brand-primary {
-        font-size: 12px;
-        letter-spacing: 1.5px;
+        font-size: 8px;
+        letter-spacing: 0.5px;
     }
-
-    .brand-primary-pink {
-        font-size: 20px;
+    .brand-primary-sm { font-size: 10px; }
+    .brand-primary-pink { font-size: 13px; }
+    .brand-sub { font-size: 5px; letter-spacing: 1.5px; }
+    .brand-sub-sm { font-size: 4px; letter-spacing: 0.8px; }
+    .brand-script { font-size: 12px; }
+    .brand-elegant { font-size: 12px; }
+    .brand-korean { font-size: 10px; }
+    .brand-the { font-size: 6px; }
+    .brand-purest { font-size: 9px; }
+    .brand-solutions { font-size: 6px; }
+    .brand-icon { font-size: 12px; margin-bottom: 2px; }
+    .brand-tag {
+        font-size: 6px;
+        padding: 1px 5px;
+        top: 4px;
+        right: 4px;
     }
 }
 

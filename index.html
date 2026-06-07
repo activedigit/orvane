@@ -706,6 +706,44 @@
         })();
     </script>
 
+    <!-- Brands Marquee: duplicate cards for seamless infinite scroll on mobile -->
+    <script>
+        (function() {
+            function setupMarquee() {
+                const grid = document.querySelector('.brands-grid');
+                if (!grid || grid.dataset.marqueeReady === '1') return;
+                if (window.innerWidth > 968) return; // desktop keeps grid layout
+
+                // Clone all brand cards once so animation translateX(50%) reveals duplicates seamlessly
+                const cards = Array.from(grid.querySelectorAll('.brand-card'));
+                cards.forEach(c => {
+                    const clone = c.cloneNode(true);
+                    clone.setAttribute('aria-hidden', 'true');
+                    grid.appendChild(clone);
+                });
+                grid.dataset.marqueeReady = '1';
+            }
+            // Run on load and on resize (in case viewport crosses breakpoint)
+            setupMarquee();
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    // Reset and re-run if needed
+                    const grid = document.querySelector('.brands-grid');
+                    if (grid && grid.dataset.marqueeReady === '1' && window.innerWidth > 968) {
+                        // Remove cloned cards on desktop
+                        const clones = grid.querySelectorAll('.brand-card[aria-hidden="true"]');
+                        clones.forEach(c => c.remove());
+                        grid.dataset.marqueeReady = '';
+                    } else {
+                        setupMarquee();
+                    }
+                }, 200);
+            });
+        })();
+    </script>
+
     <!-- Brand Story -->
     <section class="brand-story">
         <div class="container">
