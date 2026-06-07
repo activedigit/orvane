@@ -43,3 +43,6 @@ logs/
 # Build artifacts (if any)
 dist/
 build/
+
+# Original uncompressed hero source images
+top-view-*.jpg
