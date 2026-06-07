@@ -116,37 +116,229 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slider">
-            <div class="hero-slide active">
-                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=1920&q=80');"></div>
-                <div class="container">
-                    <div class="hero-content">
-                        <span class="hero-eyebrow">عطور لافيرن الفاخرة</span>
-                        <h1>عطور تليق<br><span class="pink">بأناقتك</span></h1>
-                        <p>اكتشف تشكيلة Laverne الحصرية - عطور أصلية بأسعار لا تُقاوم</p>
-                        <a href="pages/products.html" class="btn btn-primary">تسوّق الآن <i class="fas fa-arrow-left"></i></a>
+    <!-- Modern Hero Slider with Real Product Images -->
+    <section class="hero-modern" id="heroModern">
+        <!-- Decorative background elements -->
+        <div class="hero-deco hero-deco-1"></div>
+        <div class="hero-deco hero-deco-2"></div>
+        <div class="hero-deco hero-deco-3"></div>
+        <div class="hero-grid-pattern"></div>
+
+        <div class="hero-modern-container">
+            <!-- Text side -->
+            <div class="hero-modern-text">
+                <div class="hero-slides-text">
+                    <div class="hero-slide-text active" data-slide="0">
+                        <span class="hero-tag-modern">
+                            <span class="hero-tag-dot"></span>
+                            كولكشن 2026 الجديد
+                        </span>
+                        <h1 class="hero-modern-title">
+                            الفخامة<br>
+                            <em class="hero-gradient-text">في كل تفصيل</em>
+                        </h1>
+                        <p class="hero-modern-subtitle">
+                            تشكيلة واسعة من أرقى العطور ومنتجات العناية والمكياج من علامات تجارية عالمية
+                        </p>
+                    </div>
+                    <div class="hero-slide-text" data-slide="1">
+                        <span class="hero-tag-modern hero-tag-sale">
+                            <span class="hero-tag-dot"></span>
+                            تخفيضات تصل لـ 50%
+                        </span>
+                        <h1 class="hero-modern-title">
+                            العروض<br>
+                            <em class="hero-gradient-text">لا تفوّتها</em>
+                        </h1>
+                        <p class="hero-modern-subtitle">
+                            خصومات حصرية على آلاف المنتجات لفترة محدودة - اطلب الآن
+                        </p>
+                    </div>
+                    <div class="hero-slide-text" data-slide="2">
+                        <span class="hero-tag-modern">
+                            <span class="hero-tag-dot"></span>
+                            ماركات حصرية
+                        </span>
+                        <h1 class="hero-modern-title">
+                            53+ ماركة<br>
+                            <em class="hero-gradient-text">عالمية</em>
+                        </h1>
+                        <p class="hero-modern-subtitle">
+                            من Laverne إلى Beauty of Joseon - كل ماركاتك المفضلة بمكان واحد
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hero-modern-actions">
+                    <a href="pages/products.html" class="hero-btn-primary">
+                        <span>تسوّق الآن</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <a href="pages/products.html?cat=sale" class="hero-btn-link">
+                        العروض الخاصة
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>1,991</strong>
+                        <span>منتج</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>53+</strong>
+                        <span>ماركة</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>24h</strong>
+                        <span>توصيل</span>
+                    </div>
+                </div>
+
+                <!-- Slider pagination -->
+                <div class="hero-pagination">
+                    <button class="hero-page active" data-slide="0"><span></span></button>
+                    <button class="hero-page" data-slide="1"><span></span></button>
+                    <button class="hero-page" data-slide="2"><span></span></button>
+                </div>
+            </div>
+
+            <!-- Product showcase side -->
+            <div class="hero-modern-showcase">
+                <div class="hero-products-stage" id="heroProductsStage">
+                    <!-- Cards populated by JS -->
+                </div>
+
+                <!-- Floating accents -->
+                <div class="hero-floating-tag hero-floating-tag-1">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div>
+                        <strong>شحن مجاني</strong>
+                        <span>+299 ₪</span>
+                    </div>
+                </div>
+                <div class="hero-floating-tag hero-floating-tag-2">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <strong>4.8/5</strong>
+                        <span>+2,500 عميل راضٍ</span>
                     </div>
                 </div>
             </div>
-            <div class="hero-slide">
-                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1920&q=80');"></div>
-                <div class="container">
-                    <div class="hero-content">
-                        <span class="hero-eyebrow">تخفيضات تصل إلى 32%</span>
-                        <h1>أجمل العطور<br><span class="pink">بأفضل الأسعار</span></h1>
-                        <p>اغتنم الفرصة - تشكيلة واسعة من عطور لافيرن مع خصومات حصرية</p>
-                        <a href="pages/products.html?cat=sale" class="btn btn-primary">عروض التخفيضات <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-controls">
-            <button class="hero-dot active" data-slide="0"></button>
-            <button class="hero-dot" data-slide="1"></button>
         </div>
     </section>
+
+    <!-- Hero Slider Logic -->
+    <script>
+        (function() {
+            const HERO_THEMES = [
+                { key: 'perfumes', match: p => p.type === 'perfume' || /(عطر|EDP|EDT)/i.test(p.name || '') },
+                { key: 'sale',     match: p => p.type === 'cream' || p.type === 'serum' || p.type === 'toner' || p.category === 'face' },
+                { key: 'brands',   match: p => p.type === 'set' || p.brand !== 'LifeStyle' }
+            ];
+
+            let currentSlide = 0;
+            let autoTimer = null;
+            const stage = document.getElementById('heroProductsStage');
+
+            function pickProductsForTheme(themeIdx) {
+                const theme = HERO_THEMES[themeIdx];
+                const data = window.PRODUCTS_DATA || [];
+                if (data.length === 0) return [];
+
+                const matching = data.filter(p =>
+                    p.image &&
+                    typeof p.image === 'string' &&
+                    p.image.startsWith('http') &&
+                    theme.match(p)
+                );
+
+                if (matching.length < 5) return matching;
+
+                // Pick 5 stable but distinct products (using seed based on theme index)
+                const picks = [];
+                const seen = new Set();
+                let attempts = 0;
+                while (picks.length < 5 && attempts < 100) {
+                    const idx = ((themeIdx + 1) * 17 + picks.length * 37 + attempts * 7) % matching.length;
+                    if (!seen.has(idx)) {
+                        seen.add(idx);
+                        picks.push(matching[idx]);
+                    }
+                    attempts++;
+                }
+                return picks;
+            }
+
+            function renderProducts(themeIdx) {
+                if (!stage) return;
+                const products = pickProductsForTheme(themeIdx);
+                if (products.length === 0) return;
+
+                // Position classes for 5 floating cards
+                const positions = ['pos-1', 'pos-2', 'pos-3', 'pos-4', 'pos-5'];
+                stage.innerHTML = products.slice(0, 5).map((p, i) => `
+                    <div class="hero-pcard ${positions[i]}" style="animation-delay: ${i * 0.1}s;">
+                        <div class="hero-pcard-img">
+                            <img src="${p.image}" alt="${(p.name || '').replace(/"/g,'&quot;')}" loading="lazy"
+                                 onerror="this.parentNode.parentNode.style.display='none'">
+                        </div>
+                        <div class="hero-pcard-info">
+                            <div class="hero-pcard-brand">${p.brand || 'ORVANE'}</div>
+                            <div class="hero-pcard-price">${p.price} ₪</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            function showSlide(idx) {
+                currentSlide = idx;
+                // Update text
+                document.querySelectorAll('.hero-slide-text').forEach((el, i) => {
+                    el.classList.toggle('active', i === idx);
+                });
+                // Update pagination
+                document.querySelectorAll('.hero-page').forEach((el, i) => {
+                    el.classList.toggle('active', i === idx);
+                });
+                // Update products
+                renderProducts(idx);
+            }
+
+            function nextSlide() {
+                showSlide((currentSlide + 1) % HERO_THEMES.length);
+            }
+
+            function startAutoRotation() {
+                if (autoTimer) clearInterval(autoTimer);
+                autoTimer = setInterval(nextSlide, 6000);
+            }
+
+            function init() {
+                if (!window.PRODUCTS_DATA || window.PRODUCTS_DATA.length === 0) return false;
+                showSlide(0);
+                startAutoRotation();
+
+                document.querySelectorAll('.hero-page').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const slide = parseInt(btn.dataset.slide);
+                        showSlide(slide);
+                        startAutoRotation(); // restart timer
+                    });
+                });
+                return true;
+            }
+
+            if (!init()) {
+                let tries = 0;
+                const wait = setInterval(() => {
+                    if (init() || ++tries > 30) clearInterval(wait);
+                }, 100);
+            }
+        })();
+    </script>
 
     <!-- Features Bar -->
     <section class="features-bar">
