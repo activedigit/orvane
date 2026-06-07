@@ -253,17 +253,31 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!grid || typeof PRODUCTS === 'undefined') return;
 
         let filtered = PRODUCTS;
-        if (filter === 'perfumes') filtered = PRODUCTS.filter(p => p.type === 'perfume');
-        if (filter === 'bakhoor') filtered = PRODUCTS.filter(p => p.type === 'bakhoor');
-        if (filter === 'bestsellers') filtered = PRODUCTS.filter(p => p.bestseller);
-        if (filter === 'featured') filtered = PRODUCTS.filter(p => p.featured);
+        if (filter === 'perfumes') {
+            filtered = PRODUCTS.filter(p => p.type === 'perfume' && p.image && p.image.startsWith('http'));
+        } else if (filter === 'bakhoor') {
+            filtered = PRODUCTS.filter(p => p.type === 'bakhoor');
+        } else if (filter === 'offers' || filter === 'sale') {
+            // Show products with original price (have discount) OR best low-priced products
+            filtered = PRODUCTS.filter(p =>
+                (p.originalPrice && p.originalPrice > p.price) ||
+                (p.badges && p.badges.includes('sale')) ||
+                p.price <= 30 // cheap offers as fallback
+            ).filter(p => p.image && p.image.startsWith('http'));
+        } else if (filter === 'bestsellers') {
+            filtered = PRODUCTS.filter(p => p.bestseller || (p.image && p.image.startsWith('http')));
+        } else if (filter === 'featured') {
+            filtered = PRODUCTS.filter(p => p.featured || (p.image && p.image.startsWith('http')));
+        }
 
+        // Stable shuffle - same products every refresh
+        filtered = filtered.slice(0, Math.max(limit, 50)).filter((_, i) => i % Math.max(1, Math.floor(filtered.length / limit / 3)) === 0);
         filtered = filtered.slice(0, limit);
         grid.innerHTML = filtered.map(createProductCard).join('');
     }
 
     renderProducts('perfumesGrid', 'featured', 5);
-    renderProducts('creamsGrid', 'bakhoor', 5);
+    renderProducts('creamsGrid', 'offers', 5);
     renderProducts('bestsellersGrid', 'bestsellers', 5);
 
     // ===== Cart Management =====
