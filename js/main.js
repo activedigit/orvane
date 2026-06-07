@@ -4,6 +4,113 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    // ===== Mobile Bottom Navigation =====
+    (function injectMobileBottomNav() {
+        if (document.getElementById('mobileBottomNav')) return;
+
+        const path = window.location.pathname.toLowerCase();
+        const inPagesFolder = path.includes('/pages/');
+        const homeLink = inPagesFolder ? '../index.html' : 'index.html';
+        const productsLink = inPagesFolder ? 'products.html' : 'pages/products.html';
+
+        const isHome = !inPagesFolder && (path.endsWith('/') || path.endsWith('/index.html'));
+        const isProducts = path.includes('products.html');
+
+        const nav = document.createElement('nav');
+        nav.id = 'mobileBottomNav';
+        nav.className = 'mobile-bottom-nav';
+        nav.setAttribute('aria-label', 'تنقل سفلي');
+        nav.innerHTML =
+            '<a href="' + homeLink + '" class="mbn-item ' + (isHome ? 'active' : '') + '">' +
+                '<i class="fas fa-home"></i>' +
+                '<span>الرئيسية</span>' +
+            '</a>' +
+            '<a href="' + productsLink + '" class="mbn-item ' + (isProducts ? 'active' : '') + '">' +
+                '<i class="fas fa-store"></i>' +
+                '<span>المتجر</span>' +
+            '</a>' +
+            '<button type="button" class="mbn-item cart-btn" aria-label="السلة">' +
+                '<i class="fas fa-shopping-bag"></i>' +
+                '<span>السلة</span>' +
+                '<span class="mbn-badge cart-count">0</span>' +
+            '</button>' +
+            '<a href="#" class="mbn-item">' +
+                '<i class="far fa-user"></i>' +
+                '<span>حسابي</span>' +
+            '</a>';
+        document.body.appendChild(nav);
+    })();
+
+    // ===== PWA: Service Worker Registration =====
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            const swPath = window.location.pathname.includes('/pages/') ? '../sw.js' : 'sw.js';
+            navigator.serviceWorker.register(swPath).catch((err) => {
+                console.warn('Service Worker registration failed:', err);
+            });
+        });
+    }
+
+    // ===== PWA: Install Prompt =====
+    let deferredInstallPrompt = null;
+    let installBtn = null;
+
+    function createInstallButton() {
+        if (installBtn) return installBtn;
+        installBtn = document.createElement('button');
+        installBtn.id = 'pwaInstallBtn';
+        installBtn.className = 'pwa-install-btn';
+        installBtn.setAttribute('aria-label', 'تثبيت التطبيق');
+        installBtn.innerHTML =
+            '<i class="fas fa-download"></i>' +
+            '<div class="pwa-install-text">' +
+                '<strong>ثبّت التطبيق</strong>' +
+                '<span>للوصول السريع من شاشتك</span>' +
+            '</div>' +
+            '<button class="pwa-install-close" aria-label="إغلاق"><i class="fas fa-times"></i></button>';
+        document.body.appendChild(installBtn);
+
+        installBtn.addEventListener('click', async (e) => {
+            if (e.target.closest('.pwa-install-close')) {
+                e.stopPropagation();
+                installBtn.classList.remove('visible');
+                try { localStorage.setItem('orvane_install_dismissed', Date.now().toString()); } catch (er) {}
+                return;
+            }
+            if (!deferredInstallPrompt) return;
+            deferredInstallPrompt.prompt();
+            const choice = await deferredInstallPrompt.userChoice;
+            if (choice.outcome === 'accepted') {
+                installBtn.classList.remove('visible');
+            }
+            deferredInstallPrompt = null;
+        });
+        return installBtn;
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredInstallPrompt = e;
+
+        // Check if user dismissed within last 7 days
+        try {
+            const dismissed = parseInt(localStorage.getItem('orvane_install_dismissed') || '0');
+            const sevenDays = 7 * 24 * 60 * 60 * 1000;
+            if (Date.now() - dismissed < sevenDays) return;
+        } catch (err) {}
+
+        // Show install button after a delay (don't be intrusive)
+        setTimeout(() => {
+            const btn = createInstallButton();
+            btn.classList.add('visible');
+        }, 4000);
+    });
+
+    window.addEventListener('appinstalled', () => {
+        if (installBtn) installBtn.classList.remove('visible');
+        deferredInstallPrompt = null;
+    });
+
     // ===== Mobile Menu =====
     const menuToggle = document.getElementById('mobileMenuToggle');
     const closeNav = document.getElementById('closeNav');

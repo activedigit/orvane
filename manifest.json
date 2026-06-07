@@ -1,0 +1,44 @@
+{
+  "name": "ORVANE - متجر العطور والعناية",
+  "short_name": "ORVANE",
+  "description": "متجر العطور والعناية بالبشرة والمكياج - أكثر من 1900 منتج من ماركات عالمية",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["shopping", "lifestyle", "beauty"],
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "تسوّق الآن",
+      "short_name": "تسوّق",
+      "description": "تصفّح جميع المنتجات",
+      "url": "./pages/products.html",
+      "icons": [{ "src": "assets/logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "العروض",
+      "short_name": "عروض",
+      "description": "العروض والتخفيضات",
+      "url": "./pages/products.html?cat=sale",
+      "icons": [{ "src": "assets/logo.png", "sizes": "192x192" }]
+    }
+  ]
+}

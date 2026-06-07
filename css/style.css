@@ -2323,6 +2323,220 @@ h1, h2, h3, h4, h5, h6 {
     border-color: var(--color-accent-dark);
 }
 
+/* ===== Mobile Bottom Navigation ===== */
+.mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+    z-index: 998;
+    padding: 6px 8px;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+.mbn-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 4px 6px;
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-size: 11px;
+    font-weight: 600;
+    font-family: inherit;
+    border-radius: 10px;
+    transition: all 0.2s;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    min-width: 0;
+}
+
+.mbn-item:hover {
+    color: var(--color-accent-dark);
+    background: var(--color-accent-light);
+}
+
+.mbn-item i {
+    font-size: 20px;
+    margin-bottom: 4px;
+    transition: transform 0.2s;
+}
+
+.mbn-item span:not(.mbn-badge) {
+    font-size: 10px;
+    line-height: 1;
+}
+
+.mbn-item.active {
+    color: var(--color-accent-dark);
+}
+
+.mbn-item.active i {
+    transform: scale(1.15);
+}
+
+.mbn-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 20%;
+    left: 20%;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 0 0 3px 3px;
+}
+
+.mbn-badge {
+    position: absolute;
+    top: 4px;
+    left: calc(50% - 22px);
+    background: var(--color-sale);
+    color: var(--color-white);
+    font-size: 10px;
+    font-weight: 800;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    box-shadow: 0 2px 4px rgba(237,26,57,0.3);
+}
+
+/* When mobile bottom nav is visible, hide the cart-btn in main header on mobile to avoid duplicate cart triggers (styling override safety) */
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        display: grid;
+    }
+    body {
+        padding-bottom: 70px;
+    }
+    /* Pad cart drawer + back-to-top to not be hidden under bottom nav */
+    .back-to-top {
+        bottom: 84px;
+    }
+    /* Remove the default cart-btn black background styling when applied to bottom nav button */
+    .mobile-bottom-nav .cart-btn {
+        background: transparent !important;
+        color: var(--color-text-light) !important;
+        min-width: 0 !important;
+        padding: 8px 4px 6px !important;
+        height: auto !important;
+    }
+    .mobile-bottom-nav .cart-btn:hover {
+        background: var(--color-accent-light) !important;
+        color: var(--color-accent-dark) !important;
+    }
+    .mobile-bottom-nav .cart-btn .label {
+        display: none;
+    }
+}
+
+/* ===== PWA Install Button ===== */
+.pwa-install-btn {
+    position: fixed;
+    bottom: 90px;
+    left: 16px;
+    right: 16px;
+    max-width: 380px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #2a2a2a 100%);
+    color: var(--color-white);
+    border: none;
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: none;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    z-index: 997;
+    font-family: inherit;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
+}
+
+.pwa-install-btn.visible {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.pwa-install-btn > i {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.pwa-install-text {
+    flex: 1;
+    text-align: right;
+    min-width: 0;
+}
+
+.pwa-install-text strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: var(--color-white);
+}
+
+.pwa-install-text span {
+    display: block;
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+}
+
+.pwa-install-close {
+    background: rgba(255,255,255,0.1);
+    color: var(--color-white);
+    border: none;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: background 0.2s;
+}
+
+.pwa-install-close:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+@media (min-width: 769px) {
+    .pwa-install-btn {
+        bottom: 30px;
+        left: auto;
+        right: 30px;
+        width: 320px;
+        margin: 0;
+    }
+}
+
 /* ===== Cart Drawer ===== */
 .cart-drawer {
     position: fixed;
