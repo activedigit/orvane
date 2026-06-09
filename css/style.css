@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 24px;
 }
 
-/* ===== Buttons ===== */
+/* ===== Buttons - rounded modern style ===== */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0;
     text-transform: none;
     border: 2px solid transparent;
-    border-radius: 6px;
+    border-radius: 999px;
     cursor: pointer;
     transition: all var(--transition);
     white-space: nowrap;
