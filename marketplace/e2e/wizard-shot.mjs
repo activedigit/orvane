@@ -1,0 +1,12 @@
+import { chromium } from '@playwright/test';
+const [,, out] = process.argv;
+const base = process.env.BASE_URL || 'http://localhost:3000';
+const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+await page.goto(`${base}/requests/new?text=${encodeURIComponent('أحتاج تركيب نظام كاميرات لمستودع في الدمام')}`, { waitUntil: 'networkidle' });
+await page.click('button:has-text("متابعة")');
+await page.waitForSelector('text=فهمنا طلبك');
+await page.click('div.fade-up button >> nth=0');
+await page.waitForTimeout(500);
+await page.screenshot({ path: out, fullPage: true });
+await browser.close();

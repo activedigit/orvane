@@ -1,0 +1,12 @@
+import { chromium } from '@playwright/test';
+const [,, email, password, path, needle] = process.argv;
+const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+const page = await browser.newPage();
+await page.goto('http://localhost:3000/login', { waitUntil: 'networkidle' });
+await page.fill('input[name=email]', email); await page.fill('input[name=password]', password);
+await Promise.all([page.waitForURL((u) => !u.pathname.startsWith('/login')), page.click('button[type=submit]')]);
+await page.goto('http://localhost:3000' + path, { waitUntil: 'networkidle' });
+const html = await page.content();
+const i = html.indexOf(needle);
+console.log(i < 0 ? 'NOT FOUND' : 'FOUND at ' + i + ': ' + html.slice(Math.max(0, i - 300), i + 80).replace(/\s+/g, ' '));
+await browser.close();

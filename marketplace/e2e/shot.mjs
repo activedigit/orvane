@@ -1,0 +1,13 @@
+import { chromium } from '@playwright/test';
+const [,, url, out, width = '1280', height = '900', cookie] = process.argv;
+const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+const ctx = await browser.newContext({ viewport: { width: Number(width), height: Number(height) }, deviceScaleFactor: 1 });
+if (cookie) await ctx.addCookies([{ name: 'orood_session', value: cookie, url: 'http://localhost:3000' }]);
+const page = await ctx.newPage();
+const errors = [];
+page.on('pageerror', (e) => errors.push(e.message));
+page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+await page.screenshot({ path: out, fullPage: true });
+console.log('errors:', errors.length ? errors : 'none');
+await browser.close();

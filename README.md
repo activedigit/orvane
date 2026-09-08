@@ -1,3 +1,5 @@
+> **منصة عروض الأسعار (Saudi quotation marketplace)** — التطبيق الكامل (Next.js + Supabase/PostgreSQL) موجود في المجلد [`marketplace/`](marketplace/README.md) مع تعليمات التشغيل، البيانات التجريبية، والاختبارات.
+
 # ORVANE
 
 موقع تجارة إلكترونية للعطور ومنتجات التجميل والعناية بالبشرة - عربي / RTL.
